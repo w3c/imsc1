@@ -2687,17 +2687,6 @@ ittp:progressivelyDecodable
       <section id='itts-forcedDisplay'>
         <h4>itts:forcedDisplay</h4>
 
-        <p><code>itts:forcedDisplay</code> can be used to hide content whose computed value of <code>tts:visibility</code> is
-        <code>"visible"</code> when the processor has been configured to do so via the application parameter
-        <code>displayForcedOnlyMode</code>.</p>
-
-        <p>If and only if the value of <code>displayForcedOnlyMode</code> is <code>"true"</code>, a content element with a
-        <code>itts:forcedDisplay</code> computed value of <code>"false"</code> SHALL NOT produce any visible rendering, regardless
-        of the computed value of <code>tts:visibility</code>.</p>
-
-        <p>The <code>itts:forcedDisplay</code> attribute has no effect on content layout or composition, but merely determines
-        whether composed content is visible or not.</p>
-
         <p>The <code>itts:forcedDisplay</code> attribute SHALL conform to the following:</p>
 
         <table class="simple">
@@ -2745,10 +2734,17 @@ ittp:progressivelyDecodable
           </tbody>
         </table>
 
+        <p>If and only if the value of <code>displayForcedOnlyMode</code> is <code>"true"</code>, a content element with a
+        <code>itts:forcedDisplay</code> computed value of <code>"false"</code> SHALL NOT produce any visible rendering, regardless
+        of the computed value of <code>tts:visibility</code>.</p>
+
         <p>Annex <a href='#forced-content'></a> illustrates the use of <code>itts:forcedDisplay</code> in an application in which a
         single document contains both hard of hearing captions and translated foreign language subtitles, using
         <code>itts:forcedDisplay</code> to display translation subtitles always, independently of whether the hard of hearing
         captions are displayed or hidden.</p>
+
+        <p>The <code>itts:forcedDisplay</code> attribute has no effect on content layout or composition, but merely determines
+        whether composed content is visible or not.</p>
 
         <p>The <a>presentation processor</a> SHALL accept an optional boolean parameter called <code>displayForcedOnlyMode</code>,
         whose value MAY be set by a context external to the <a>presentation processor</a>. If not set, the value of
